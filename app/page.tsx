@@ -5,6 +5,7 @@ import ProductShowcase from '../components/ProductShowcase';
 import HowItWorks from '../components/HowItWorks';
 import ProductCategories from '../components/ProductCategories';
 import Testimonials from '../components/Testimonials';
+import PartnerBenefits from '../components/PartnerBenefits';
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       <ProductShowcase />
       <HowItWorks />
       <ProductCategories />
+      <Testimonials />
+      <PartnerBenefits />
     </main>
   );
 }

@@ -89,7 +89,7 @@ export default function Testimonials() {
 
   // Render star rating
   const renderStars = (rating: number) => {
-    const stars = [];
+    const stars: React.ReactNode[] = [];
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
     
