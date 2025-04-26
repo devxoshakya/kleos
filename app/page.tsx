@@ -1,3 +1,4 @@
+import React from 'react';
 import HeroSection from '../client/src/components/HeroSection';
 import ProductShowcase from '../client/src/components/ProductShowcase';
 import HowItWorks from '../client/src/components/HowItWorks';

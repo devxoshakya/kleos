@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display, Montserrat } from 'next/font/google';
 import '../client/src/index.css';
+import React from 'react';
 
 const inter = Inter({ 
   subsets: ['latin'],
