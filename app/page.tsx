@@ -6,6 +6,7 @@ import HowItWorks from '../components/HowItWorks';
 import ProductCategories from '../components/ProductCategories';
 import Testimonials from '../components/Testimonials';
 import PartnerBenefits from '../components/PartnerBenefits';
+import ContactSection from '../components/ContactSection';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <ProductCategories />
       <Testimonials />
       <PartnerBenefits />
+      <ContactSection />
     </main>
   );
 }
