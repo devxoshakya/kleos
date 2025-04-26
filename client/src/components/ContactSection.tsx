@@ -62,13 +62,18 @@ export default function ContactSection() {
   async function onSubmit(data: FormValues) {
     setIsSubmitting(true);
     try {
+      // Send data to Google Sheets API endpoint
       await apiRequest("POST", "/api/quote-request", data);
+      
       toast({
         title: "Quote Request Submitted",
-        description: "Our team will contact you shortly!",
+        description: "Your information has been saved. Our team will contact you shortly!",
       });
+      
+      // Reset form after successful submission
       form.reset();
     } catch (error) {
+      console.error("Form submission error:", error);
       toast({
         title: "Submission Error",
         description: "There was a problem submitting your request. Please try again.",
@@ -79,6 +84,7 @@ export default function ContactSection() {
     }
   }
 
+  // Rest of the component remains unchanged
   return (
     <section id="contact" className="py-20 bg-neutral-lightest">
       <div className="container mx-auto px-4">
@@ -125,15 +131,15 @@ export default function ContactSection() {
               <div className="space-y-3">
                 <p className="flex items-center">
                   <RectangleEllipsis className="text-primary mr-3 h-5 w-5" />
-                  <a href="mailto:info@luxeamenities.com" className="hover:text-accent transition-colors">info@luxeamenities.com</a>
+                  <a href="mailto:kumarakshay94280@gmail.com" className="hover:text-accent transition-colors">kumarakshay94280@gmail.com</a>
                 </p>
                 <p className="flex items-center">
                   <Phone className="text-primary mr-3 h-5 w-5" />
-                  <a href="tel:+18005551234" className="hover:text-accent transition-colors">+1 (800) 555-1234</a>
+                  <a href="tel:+917056267847" className="hover:text-accent transition-colors">+91-7056267847</a>
                 </p>
                 <p className="flex items-center">
                   <MapPin className="text-primary mr-3 h-5 w-5" />
-                  <span>123 Luxury Lane, Suite 400, New York, NY 10001</span>
+                  <span>Hno-20, Vidya Nagar, Ambala Cantt, Haryana, 133004</span>
                 </p>
               </div>
             </div>

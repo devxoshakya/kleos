@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, ArrowRight, ShowerHead, HandHelping, Torus, SprayCan, Shirt, Leaf } from "lucide-react";
+import { Check, ArrowRight, ShowerHead, HandHelping, Torus } from "lucide-react";
 
 const categories = [
   {
@@ -33,39 +33,6 @@ const categories = [
       "Individually packaged",
       "Biodegradable options",
       "Premium quality"
-    ]
-  },
-  {
-    id: 4,
-    title: "Room Fragrances",
-    description: "Room sprays, diffusers, and ambient scent solutions for a memorable stay.",
-    icon: SprayCan,
-    features: [
-      "Signature blends",
-      "Long-lasting formulas",
-      "Custom branding available"
-    ]
-  },
-  {
-    id: 5,
-    title: "Guest Amenities",
-    description: "Slippers, bathrobes, vanity kits, and other premium guest amenities.",
-    icon: Shirt,
-    features: [
-      "Luxury quality",
-      "Custom embroidery",
-      "Sustainable materials"
-    ]
-  },
-  {
-    id: 6,
-    title: "Eco-Friendly Line",
-    description: "Sustainable toiletries with biodegradable packaging for eco-conscious properties.",
-    icon: Leaf,
-    features: [
-      "Zero waste options",
-      "Plant-based ingredients",
-      "Recycled packaging"
     ]
   }
 ];

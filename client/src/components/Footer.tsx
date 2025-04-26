@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import Logo from "@/components/ui/Logo";
 
 export default function Footer() {
   return (
@@ -6,9 +7,9 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-2xl font-heading font-bold mb-4">
-              <span className="text-accent">Luxe</span>Amenities
-            </h3>
+            <div className="mb-4">
+              <Logo color="white" size="md" />
+            </div>
             <p className="opacity-80 mb-4">
               Elevating hospitality experiences with premium toiletries sourced directly from manufacturers.
             </p>
@@ -65,7 +66,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <span className="opacity-80 mr-3">✉️</span>
-                <span className="opacity-80">info@luxeamenities.com</span>
+                <span className="opacity-80">info@kleaoslifesciences.com</span>
               </li>
               <li className="flex items-center">
                 <span className="opacity-80 mr-3">🕒</span>
@@ -77,7 +78,7 @@ export default function Footer() {
         
         <div className="border-t border-primary-light pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="opacity-70 text-sm text-center md:text-left mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} LuxeAmenities. All rights reserved.
+            &copy; {new Date().getFullYear()} Kleaos Life Sciences. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-sm opacity-70 hover:opacity-100 transition-opacity">Privacy Policy</a>

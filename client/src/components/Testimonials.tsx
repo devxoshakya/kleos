@@ -1,38 +1,34 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight, User } from "lucide-react";
 
 const testimonials = [
   {
     id: 1,
-    name: "Emma Richardson",
-    role: "General Manager, Coastal Retreat Hotel",
-    quote: "LuxeAmenities has transformed our guest experience. The quality of their products and attention to detail in custom branding has made our boutique hotel stand out among competitors.",
-    avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+    name: "Rajesh Sharma",
+    role: "General Manager, Royal Retreat Hotel, Mumbai",
+    quote: "LuxeAmenities ne hamari guest experience ko ekdum transform kar diya hai. Quality products aur custom branding mein unki attention to detail ne hamare boutique hotel ko competitors se alag stand out karaya hai.",
     stars: 5
   },
   {
     id: 2,
-    name: "David Martinez",
-    role: "Operations Director, GreenStay Hotels",
-    quote: "The eco-friendly collection has been a game-changer for our sustainability initiatives. Our guests frequently comment on the quality and our environmental commitment.",
-    avatar: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+    name: "Priya Patel",
+    role: "Operations Director, GreenStay Hotels, Bangalore",
+    quote: "The eco-friendly collection has been a game-changer for our sustainability initiatives. Our guests keep telling us how much they appreciate our commitment to the environment while maintaining luxury standards.",
     stars: 5
   },
   {
     id: 3,
-    name: "Sarah Johnson",
-    role: "Procurement Manager, Luxury Suites Group",
-    quote: "The consistent quality and reliable delivery have made LuxeAmenities an invaluable partner for our hotel chain. Their customer service is exceptional and responsive.",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+    name: "Vikram Singh",
+    role: "Procurement Manager, Taj Luxury Resorts, Delhi",
+    quote: "Consistent quality and on-time delivery have made LuxeAmenities an invaluable partner for our hotel chain. Their customer service team is always ready to help, bahut hi responsive hain.",
     stars: 4.5
   },
   {
     id: 4,
-    name: "Michael Thompson",
-    role: "Owner, The Parkview Boutique Hotel",
-    quote: "We've received countless compliments from guests about our bathroom amenities since partnering with LuxeAmenities. The custom scents have become part of our brand identity.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+    name: "Ananya Desai",
+    role: "Owner, The Parkview Boutique Hotel, Jaipur",
+    quote: "We've received countless compliments from guests about our bathroom amenities since partnering with LuxeAmenities. The custom scents have become part of our brand identity and really represent our local heritage.",
     stars: 5
   }
 ];
@@ -148,12 +144,8 @@ export default function Testimonials() {
                       "{testimonial.quote}"
                     </p>
                     <div className="flex items-center">
-                      <div className="w-12 h-12 rounded-full bg-neutral-light overflow-hidden mr-4">
-                        <img 
-                          src={testimonial.avatar} 
-                          alt={testimonial.name} 
-                          className="w-full h-full object-cover"
-                        />
+                      <div className="w-12 h-12 rounded-full bg-neutral-light flex items-center justify-center mr-4">
+                        <User size={28} className="text-primary" />
                       </div>
                       <div>
                         <h4 className="font-heading font-semibold">{testimonial.name}</h4>

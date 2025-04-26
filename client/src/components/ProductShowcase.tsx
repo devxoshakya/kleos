@@ -7,19 +7,13 @@ const products = [
     id: 1,
     name: "Essential Collection",
     description: "Premium shampoo, conditioner, and body wash in elegant recyclable packaging.",
-    image: "https://images.unsplash.com/photo-1563401900666-68bf7f5c4811"
+    image: "https://images.pexels.com/photos/3735149/pexels-photo-3735149.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
     id: 2,
     name: "Spa Collection",
     description: "Aromatherapy-infused bath products for a luxurious spa-like experience.",
     image: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8"
-  },
-  {
-    id: 3,
-    name: "Eco Collection",
-    description: "Sustainable, biodegradable toiletries with environmentally-friendly packaging.",
-    image: "https://images.unsplash.com/photo-1590439471364-192aa70c0b53"
   }
 ];
 
@@ -45,22 +39,22 @@ const itemVariants = {
 export default function ProductShowcase() {
   return (
     <section id="products" className="py-20 bg-neutral-lightest">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 flex flex-col items-center">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-16 max-w-2xl"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">Our Premium Collections</h2>
-          <p className="text-neutral-medium max-w-2xl mx-auto">
+          <p className="text-neutral-medium mx-auto">
             Discover our curated selection of luxury toiletries designed to enhance your guests' stay and reflect your brand's commitment to quality.
           </p>
         </motion.div>
         
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -92,7 +86,7 @@ export default function ProductShowcase() {
         </motion.div>
         
         <motion.div 
-          className="mt-12 text-center"
+          className="mt-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

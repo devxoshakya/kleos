@@ -5,12 +5,14 @@ export default function HeroSection() {
   return (
     <section 
       id="home" 
-      className="pt-28 pb-20 md:pt-40 md:pb-32 bg-cover bg-center relative"
+      className="pt-28 pb-20 md:pt-40 md:pb-32 bg-cover bg-center bg-no-repeat relative"
       style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80')"
+        backgroundImage: "url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80')"
       }}
     >
-      <div className="absolute inset-0 bg-primary bg-opacity-70"></div>
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      
       <div className="container mx-auto px-4 relative z-10 text-center">
         <motion.h2 
           className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
@@ -18,7 +20,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Premium Toiletries for <br className="hidden md:block" /> Exceptional Hospitality
+          Premium Amenities for <br className="hidden md:block" /> Exceptional Hospitality
         </motion.h2>
         
         <motion.p 
@@ -34,7 +36,7 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row justify-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
         >
           <a href="#products">
             <Button className="bg-accent hover:bg-[#D97706] text-white font-accent font-medium px-8 py-6 h-auto">
@@ -42,7 +44,7 @@ export default function HeroSection() {
             </Button>
           </a>
           <a href="#contact">
-            <Button variant="outline" className="bg-white hover:bg-neutral-light text-primary font-accent font-medium px-8 py-6 h-auto">
+            <Button variant="outline" className="bg-white  hover:bg-neutral-light text-primary font-accent font-medium px-8 py-6 h-auto">
               Request a Quote
             </Button>
           </a>

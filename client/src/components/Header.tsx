@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/ui/Logo";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -30,9 +31,9 @@ export default function Header() {
     <header className={`fixed w-full bg-white bg-opacity-95 shadow-md z-50 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className="text-2xl md:text-3xl font-heading font-bold text-primary">
-            <span className="text-accent">Luxe</span>Amenities
-          </h1>
+          <a href="#home" className="flex items-center">
+            <Logo size={scrolled ? "sm" : "md"} variant="full" className="transition-all duration-300" />
+          </a>
         </div>
         
         <nav className="hidden md:flex space-x-8">
