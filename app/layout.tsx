@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Playfair_Display, Montserrat } from 'next/font/google';
 import './globals.css';
 import React from 'react';
+import { Toaster } from '../components/ui/toaster';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -35,6 +36,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} ${montserrat.variable} font-sans`}>
         {children}
+        <Toaster />
       </body>
     </html>
   );
