@@ -11,7 +11,7 @@ export default function Footer() {
               <Logo color="white" size="md" />
             </div>
             <p className="opacity-80 mb-4">
-              Elevating hospitality experiences with premium toiletries sourced directly from manufacturers.
+              Elevating hospitality experiences with  toiletries sourced directly from manufacturers.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-accent transition-colors" aria-label="Facebook">

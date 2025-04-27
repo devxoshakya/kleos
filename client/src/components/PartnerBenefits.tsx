@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Award, Tag, Paintbrush, Truck, Leaf, Headset } from "lucide-react";
+import { Award, Tag, Paintbrush, Truck, Headset } from "lucide-react";
 
 const benefits = [
   {
     id: 1,
-    title: "Premium Quality",
+    title: " Quality",
     description: "All our products are sourced from top manufacturers ensuring exceptional quality and guest satisfaction.",
     icon: Award
   },
   {
     id: 2,
     title: "Competitive Pricing",
-    description: "Direct manufacturer relationships allow us to offer premium products at competitive wholesale rates.",
+    description: "Direct manufacturer relationships allow us to offer  products at competitive wholesale rates.",
     icon: Tag
   },
   {
@@ -29,12 +29,6 @@ const benefits = [
   },
   {
     id: 5,
-    title: "Sustainability Focus",
-    description: "Eco-friendly options with biodegradable packaging to support your sustainability initiatives.",
-    icon: Leaf
-  },
-  {
-    id: 6,
     title: "Dedicated Support",
     description: "Personal account management and responsive customer service to address all your needs promptly.",
     icon: Headset

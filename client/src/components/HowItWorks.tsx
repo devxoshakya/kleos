@@ -10,7 +10,7 @@ const steps = [
   {
     step: 2,
     title: "Product Selection",
-    description: "Choose from our premium collections or customize to your specifications."
+    description: "Choose from our  collections or customize to your specifications."
   },
   {
     step: 3,
@@ -42,7 +42,7 @@ export default function HowItWorks() {
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">How It Works</h2>
           <p className="text-neutral-medium max-w-2xl mx-auto">
-            Our streamlined process makes it easy to source premium toiletries for your hospitality business.
+            Our streamlined process makes it easy to source  toiletries for your hospitality business.
           </p>
         </motion.div>
         

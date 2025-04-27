@@ -6,7 +6,7 @@ const products = [
   {
     id: 1,
     name: "Essential Collection",
-    description: "Premium shampoo, conditioner, and body wash in elegant recyclable packaging.",
+    description: " shampoo, conditioner, and body wash in elegant recyclable packaging.",
     image: "https://images.pexels.com/photos/3735149/pexels-photo-3735149.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
@@ -47,7 +47,7 @@ export default function ProductShowcase() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">Our Premium Collections</h2>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">Our  Collections</h2>
           <p className="text-neutral-medium mx-auto">
             Discover our curated selection of luxury toiletries designed to enhance your guests' stay and reflect your brand's commitment to quality.
           </p>

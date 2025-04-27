@@ -32,7 +32,7 @@ const categories = [
     features: [
       "Individually packaged",
       "Biodegradable options",
-      "Premium quality"
+      " quality"
     ]
   }
 ];

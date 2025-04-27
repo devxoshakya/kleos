@@ -20,7 +20,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Premium Amenities for <br className="hidden md:block" /> Exceptional Hospitality
+           Amenities for <br className="hidden md:block" /> Exceptional Hospitality
         </motion.h2>
         
         <motion.p 
@@ -29,7 +29,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Elevate your guest experience with our luxury toiletry solutions sourced directly from premium manufacturers.
+          Elevate your guest experience with our luxury toiletry solutions sourced directly from  manufacturers.
         </motion.p>
         
         <motion.div 

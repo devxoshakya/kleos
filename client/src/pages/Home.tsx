@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   // Set page title
   useEffect(() => {
-    document.title = "Kleaos Life Sciences | Premium Hospitality Supplies";
+    document.title = "Kleaos Life Sciences |  Hospitality Supplies";
   }, []);
 
   return (

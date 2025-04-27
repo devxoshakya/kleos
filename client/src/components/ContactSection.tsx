@@ -125,7 +125,7 @@ export default function ContactSection() {
           >
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">Request a Quote</h2>
             <p className="text-neutral-medium mb-6">
-              Interested in elevating your guest experience with our premium toiletries? Fill out the form to get a customized quote for your property.
+              Interested in elevating your guest experience with our  toiletries? Fill out the form to get a customized quote for your property.
             </p>
             
             <div className="mb-8">

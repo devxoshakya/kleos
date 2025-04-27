@@ -6,8 +6,8 @@ const testimonials = [
   {
     id: 1,
     name: "Rajesh Sharma",
-    role: "General Manager, Royal Retreat Hotel, Mumbai",
-    quote: "LuxeAmenities ne hamari guest experience ko ekdum transform kar diya hai. Quality products aur custom branding mein unki attention to detail ne hamare boutique hotel ko competitors se alag stand out karaya hai.",
+    role: "General Manager, Retreat Hotel, Mumbai",
+    quote: "Kleaos Lifesciences ne hamari guest experience ko ekdum transform kar diya hai. Quality products aur custom branding mein unki attention to detail ne hamare boutique hotel ko competitors se alag stand out karaya hai.",
     stars: 5
   },
   {
@@ -20,15 +20,15 @@ const testimonials = [
   {
     id: 3,
     name: "Vikram Singh",
-    role: "Procurement Manager, Taj Luxury Resorts, Delhi",
-    quote: "Consistent quality and on-time delivery have made LuxeAmenities an invaluable partner for our hotel chain. Their customer service team is always ready to help, bahut hi responsive hain.",
+    role: "Procurement Manager, Top Resorts, Delhi",
+    quote: "Consistent quality and on-time delivery have made Kleaos Lifesciences an invaluable partner for our hotel chain. Their customer service team is always ready to help, bahut hi responsive hain.",
     stars: 4.5
   },
   {
     id: 4,
     name: "Ananya Desai",
     role: "Owner, The Parkview Boutique Hotel, Jaipur",
-    quote: "We've received countless compliments from guests about our bathroom amenities since partnering with LuxeAmenities. The custom scents have become part of our brand identity and really represent our local heritage.",
+    quote: "We've received countless compliments from guests about our bathroom amenities since partnering with Kleaos Lifesciences. The custom scents have become part of our brand identity and really represent our local heritage.",
     stars: 5
   }
 ];
@@ -54,15 +54,6 @@ export default function Testimonials() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
-
-  // Auto advance carousel
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 5000);
-    
-    return () => clearInterval(interval);
   }, []);
 
   // Navigate carousel
@@ -120,7 +111,7 @@ export default function Testimonials() {
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">What Our Partners Say</h2>
           <p className="text-neutral-medium max-w-2xl mx-auto">
-            Hear from hospitality businesses that have elevated their guest experience with our premium toiletries.
+            Hear from hospitality businesses that have elevated their guest experience with our  toiletries.
           </p>
         </motion.div>
         
