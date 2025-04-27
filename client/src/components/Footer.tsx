@@ -58,19 +58,19 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <span className="opacity-80 mt-1 mr-3">📍</span>
-                <span className="opacity-80">123 Luxury Lane, Suite 400, New York, NY 10001</span>
+                <span className="opacity-80">20, Vidya Nagar, Ambala Cantt, Haryana, 133004</span>
               </li>
               <li className="flex items-center">
                 <span className="opacity-80 mr-3">📞</span>
-                <span className="opacity-80">+1 (800) 555-1234</span>
+                <span className="opacity-80">+91-7056267847</span>
               </li>
               <li className="flex items-center">
                 <span className="opacity-80 mr-3">✉️</span>
-                <span className="opacity-80">info@kleaoslifesciences.com</span>
+                <span className="opacity-80">info@kleaos.com</span>
               </li>
               <li className="flex items-center">
                 <span className="opacity-80 mr-3">🕒</span>
-                <span className="opacity-80">Mon-Fri: 9AM-5PM EST</span>
+                <span className="opacity-80">Mon-Fri: 9AM-5PM IST</span>
               </li>
             </ul>
           </div>

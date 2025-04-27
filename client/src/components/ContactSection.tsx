@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { apiRequest } from "@/lib/queryClient";
+import emailjs from '@emailjs/browser';
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -62,12 +62,34 @@ export default function ContactSection() {
   async function onSubmit(data: FormValues) {
     setIsSubmitting(true);
     try {
-      // Send data to Google Sheets API endpoint
-      await apiRequest("POST", "/api/quote-request", data);
+      // EmailJS service configuration - replace with your actual EmailJS IDs
+      const serviceId = 'YOUR_EMAILJS_SERVICE_ID';
+      const templateId = 'YOUR_EMAILJS_TEMPLATE_ID';
+      const publicKey = 'YOUR_EMAILJS_PUBLIC_KEY';
+      
+      // Prepare template parameters from form data
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        company_name: data.company,
+        phone_number: data.phone,
+        property_type: data.propertyType,
+        room_count: data.rooms || 'Not specified',
+        message: data.message || 'No additional information provided',
+        to_name: 'Kleaos Lifescience',
+      };
+
+      // Send the email using EmailJS
+      await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
       
       toast({
         title: "Quote Request Submitted",
-        description: "Your information has been saved. Our team will contact you shortly!",
+        description: "Your information has been sent. Our team will contact you shortly!",
       });
       
       // Reset form after successful submission
@@ -131,7 +153,7 @@ export default function ContactSection() {
               <div className="space-y-3">
                 <p className="flex items-center">
                   <RectangleEllipsis className="text-primary mr-3 h-5 w-5" />
-                  <a href="mailto:kumarakshay94280@gmail.com" className="hover:text-accent transition-colors">kumarakshay94280@gmail.com</a>
+                  <a href="mailto:info@kleaos.com" className="hover:text-accent transition-colors">info@kleaos.com</a>
                 </p>
                 <p className="flex items-center">
                   <Phone className="text-primary mr-3 h-5 w-5" />
@@ -139,7 +161,7 @@ export default function ContactSection() {
                 </p>
                 <p className="flex items-center">
                   <MapPin className="text-primary mr-3 h-5 w-5" />
-                  <span>Hno-20, Vidya Nagar, Ambala Cantt, Haryana, 133004</span>
+                  <span>20, Vidya Nagar, Ambala Cantt, Haryana, 133004</span>
                 </p>
               </div>
             </div>
@@ -295,26 +317,7 @@ export default function ContactSection() {
                   )}
                 />
                 
-                <FormField
-                  control={form.control}
-                  name="consent"
-                  render={({ field }) => (
-                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 mb-6">
-                      <FormControl>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                        />
-                      </FormControl>
-                      <div className="space-y-1 leading-none">
-                        <FormLabel className="text-sm text-neutral-medium font-normal">
-                          I agree to receive information about LuxeAmenities products and services. You can unsubscribe at any time. *
-                        </FormLabel>
-                        <FormMessage />
-                      </div>
-                    </FormItem>
-                  )}
-                />
+              
                 
                 <Button 
                   type="submit" 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Logo from "@/components/ui/Logo";
+import logoImage from "../assest/image.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -32,7 +32,11 @@ export default function Header() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <a href="#home" className="flex items-center">
-            <Logo size={scrolled ? "sm" : "md"} variant="full" className="transition-all duration-300" />
+            <img 
+              src={logoImage} 
+              alt="Kleaos Lifescience" 
+              className={`h-${scrolled ? '8' : '10'} transition-all duration-300`} 
+            />
           </a>
         </div>
         
