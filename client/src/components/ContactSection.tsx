@@ -71,7 +71,7 @@ export default function ContactSection() {
       const templateParams = {
         from_name: data.name,
         from_email: data.email,
-        to_email: 'kumarakshay94280@gmail.com', // Adding recipient email address
+        to_email: 'info@kleaos.com', // Adding recipient email address
         company_name: data.company,
         phone_number: data.phone,
         property_type: data.propertyType,
