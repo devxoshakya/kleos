@@ -63,29 +63,35 @@ export default function ContactSection() {
     setIsSubmitting(true);
     try {
       // EmailJS service configuration - replace with your actual EmailJS IDs
-      const serviceId = 'YOUR_EMAILJS_SERVICE_ID';
-      const templateId = 'YOUR_EMAILJS_TEMPLATE_ID';
-      const publicKey = 'YOUR_EMAILJS_PUBLIC_KEY';
+      const serviceId = 'service_iu9ox8d';
+      const templateId = 'template_0au7r3h';
+      const publicKey = '16-M14MGxj5ajs5bj';
       
       // Prepare template parameters from form data
       const templateParams = {
         from_name: data.name,
         from_email: data.email,
+        to_email: 'kumarakshay94280@gmail.com', // Adding recipient email address
         company_name: data.company,
         phone_number: data.phone,
         property_type: data.propertyType,
         room_count: data.rooms || 'Not specified',
         message: data.message || 'No additional information provided',
         to_name: 'Kleaos Lifescience',
+        reply_to: data.email, // Adding reply-to for better email responses
       };
 
+      console.log('Sending email with params:', templateParams);
+
       // Send the email using EmailJS
-      await emailjs.send(
+      const response = await emailjs.send(
         serviceId,
         templateId,
         templateParams,
         publicKey
       );
+      
+      console.log('Email sent successfully:', response);
       
       toast({
         title: "Quote Request Submitted",
@@ -317,7 +323,26 @@ export default function ContactSection() {
                   )}
                 />
                 
-              
+                <FormField
+                  control={form.control}
+                  name="consent"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md p-2">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel className="text-neutral-dark font-medium">
+                          I agree to receive information about products and services. *
+                        </FormLabel>
+                        <FormMessage />
+                      </div>
+                    </FormItem>
+                  )}
+                />
                 
                 <Button 
                   type="submit" 
